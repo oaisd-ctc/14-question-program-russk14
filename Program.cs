@@ -4,56 +4,117 @@ using System;
 
 public class Program
 {
+    public static string name;
+    public static string age;
+    public static string eyeColor;
+    public static string hairColor;
+    public static string shoeSize;
+    public static string favoriteColor;
+    public static string favoriteTVorMovie;
+    public static string favoriteTeacher;
+    public static string favoriteClass;
+    public static string favoriteHoliday;
+    public static string favoriteSeason;
+    public static string dreamJob;
+    public static string numberOfSiblings;
+    public static int ageIn5Years;
+
+
     public static void Main(string[] args)
     {
+        AskName();
+        AskAge();
+        AskEyeColor();
+        AskHairColor();
+        AskShoeSize();
+        AskFavoriteColor();
+        AskFavoriteTvShow();
+        AskFavoriteTeacher();
+        AskFavoriteClass();
+        AskFavoriteHoliday();
+        AskFavoriteSeason();
+        AskDreamJob();
+        CalculateAgeIn5Years(age);
+        AskNumberOfSiblings();
+        DisplaySummaryMessage();
+    }
+
+
+
+    public static void AskName(){
         Console.WriteLine("Please enter your name: ");
-        string name = Console.ReadLine();
-        
+        name = Console.ReadLine();
+    }
+    public static void AskAge(){
         Console.Write("Please enter your age: ");
-        int age = Convert.ToInt32(Console.ReadLine());
+        age = Console.ReadLine();
+    }
 
+    public static void AskEyeColor(){
         Console.Write("Please enter your eye color: ");
-        string eye_color = Console.ReadLine();
+        eyeColor = Console.ReadLine();
+    }
 
+    public static void AskHairColor(){
         Console.Write("Please enter your hair color: ");
-        string hair_color = Console.ReadLine();
+        hairColor = Console.ReadLine();
+    }
 
+    public static void AskShoeSize(){
         Console.Write("Please enter your shoe size: ");
-        int shoe_size = int.Parse(Console.ReadLine());
+        shoeSize = Console.ReadLine();
+    }
 
+    public static void AskFavoriteColor(){
         Console.Write("Please enter your favorite color: ");
-        string color = Console.ReadLine();
+        favoriteColor = Console.ReadLine();
+    }
 
+    public static void AskFavoriteTvShow(){
         Console.Write("Enter your favorite tv show or movie: ");
-        string fav_film = Console.ReadLine();
+        favoriteTVorMovie = Console.ReadLine();
+    }
 
+    public static void AskFavoriteTeacher(){
         Console.Write("Enter your favorite teacher: ");
-        string fav_teacher = Console.ReadLine();
-
+        favoriteTeacher = Console.ReadLine();
+    }
+    public static void AskFavoriteClass(){
         Console.Write("Enter your favorite class: ");
-        string fav_class = Console.ReadLine();
+        favoriteClass = Console.ReadLine();
+    }
 
+    public static void AskFavoriteHoliday(){
         Console.Write("Enter your favorite holiday: ");
-        string fav_holiday = Console.ReadLine();
+        favoriteHoliday = Console.ReadLine();
+    }
 
+    public static void AskFavoriteSeason(){
         Console.Write("Enter your favorite season: ");
-        string fav_season = Console.ReadLine();
+        favoriteSeason = Console.ReadLine();
+    }
 
+    public static void AskDreamJob(){
         Console.Write("Enter your dream job: ");
-        string job = Console.ReadLine();
+        dreamJob = Console.ReadLine();
+    }
 
-        int future_age = age + 5;
+    public static void CalculateAgeIn5Years(string age){
+        // local age variable
+        int ageInt = int.Parse(age); // New variable here as a placeholder int age variable, for conversion.
+        ageIn5Years = ageInt + 5;
+    }
 
+    public static void AskNumberOfSiblings(){
         Console.Write ("How many siblings do you have?: ");
-        int siblings = Convert.ToInt32(Console.ReadLine());
+        numberOfSiblings = Console.ReadLine();
         // Two ways to get ints as a variable, either .Parse() or Convert.ToInt32() 
+    }
 
-
-
-        Console.WriteLine("My friend's name is " + name + ". " + name + " is " + age + " years old. " + name + "'s eye color is " + eye_color + ". " + name + "'s hair color is "
-        + hair_color + ". " + name + "'s shoe size is " + shoe_size + ". " + name + "'s favorite color is " + color + ". " + name + "'s favorite tv show or movie is " + fav_film + 
-        ". " + name + "'s favorite teacher is " + fav_teacher + ". " + "Their favorite class is also " + fav_class + ". " + name + "'s favorite holiday is " + fav_holiday + " and their favorite season is " + fav_season + ". " + name + "'s dream job in the future is to work as a " + job + ". " + name + " will be " + future_age + " in 5 years. Finally, " + name + " has " + siblings + " siblings."); 
-
-
+    public static void DisplaySummaryMessage(){
+        Console.WriteLine("My friend's name is " + name + ". " + name + " is " + age + " years old. " + name + "'s eye color is " + eyeColor + ". " + name + "'s hair color is "
+        + hairColor + ". " + name + "'s shoe size is " + shoeSize + ". " + name + "'s favorite color is " + favoriteColor + ". " + name + "'s favorite tv show or movie is " + favoriteTVorMovie + 
+        ". " + name + "'s favorite teacher is " + favoriteTeacher + ". " + "Their favorite class is also " + favoriteClass + ". " + name + "'s favorite holiday is " + favoriteHoliday + " and their favorite season is " 
+        + favoriteSeason + ". " + name + "'s dream job in the future is to work as a " + dreamJob + ". " + name + " will be " + ageIn5Years + " in 5 years. Finally, " + name + " has " + numberOfSiblings + " siblings."); 
     }
 }
